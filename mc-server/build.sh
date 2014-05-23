@@ -3,12 +3,12 @@
 if [ "$1" = "build" ]; then
   URL=http://repository-dma.forge.cloudbees.com/release/net/maritimecloud/maritimecloud-server/$2/maritimecloud-server-$2.jar
   sed -e "s;%JAR%;$URL;g" Dockerfile.template > Dockerfile
-  sudo docker.io build -t "dmadk/mc-server:$2" .
+  docker build -t "dmadk/mc-server:$2" .
   exit
 elif [ "$1" = "push" ]; then  
    echo Trying to log in @ docker.io
-  sudo docker.io login -u dmadk  -p dmadk123 -e kav@kav.dk
-  sudo docker.io push dmadk/mc-server
+  docker login -u dmadk  -p dmadk123 -e kav@kav.dk
+  docker push dmadk/mc-server
   exit     
 else
     echo Unknown target: "$1"

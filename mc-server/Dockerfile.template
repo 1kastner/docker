@@ -1,4 +1,4 @@
-FROM kaspernielsen/javabox
+FROM dmadk/javabox
 
 ADD %JAR% /mc.jar
 
