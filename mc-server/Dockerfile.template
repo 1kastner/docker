@@ -1,8 +1,9 @@
 FROM kaspernielsen/javabox
 
-ADD %JAR% /maritimecloud-server.jar
+ADD %JAR% /mc.jar
 
-ENTRYPOINT ["java", "-jar", "/maritimecloud-server.jar"]
+
+ENTRYPOINT ["java", "-jar", "/mc.jar"]
 
 CMD []
 
