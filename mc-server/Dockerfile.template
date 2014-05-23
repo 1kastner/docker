@@ -1,0 +1,9 @@
+FROM kaspernielsen/javabox
+
+ADD %JAR% /maritimecloud-server.jar
+
+ENTRYPOINT ["java", "-jar", "/maritimecloud-server.jar"]
+
+CMD []
+
+EXPOSE 43234

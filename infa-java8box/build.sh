@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" = "javadoc" ]; then
-  sudo docker.io build -t "latest" java8box.docker
+  sudo docker.io build -t "latest" .
   
   exit
 fi
