@@ -1,4 +1,5 @@
 cd /AisLib
 git pull
 mvn clean install
-java -jar ais-lib-cli/target/ais-lib-cli-2.1-SNAPSHOT.jar filedump $SOURCES -directory $DIRECTORY
+JAR=`ls ais-lib-cli/target/ais-lib-cli*.jar`
+java -jar $JAR filedump $SOURCES -directory $DIRECTORY
